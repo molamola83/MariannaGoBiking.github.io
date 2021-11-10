@@ -21,10 +21,12 @@ I calculated ride lenghts and found anomalies regarding negative ride duration, 
 Many NULL cells were present in the geographical columns. 
 
 4) Analysis
+
 I worked pivoting data, working first on trends comparing the first three months of 2021, then focusing on March 2021.
 Then I worked on BigQuery and queried data to go on exploring data (Aggregate functions and calculations).
 
 5) Viz
+
 I then imported the analysis outputs on Tableau and prepared two dashboard with visualizations of insights.
 Here the links to both the Dashoboards:
 https://public.tableau.com/views/Capstone_March2021/Dashboard1?:language=it-IT&:display_count=n&:origin=viz_share_link 
@@ -32,5 +34,6 @@ and
 https://public.tableau.com/views/Google_Capstone_Time/Dashboard1?:language=it-IT&:display_count=n&:origin=viz_share_link (this compared to the first dashboard includes the time variable)
 
 6) Act
+
 The conclusions and the suggestion I elaborated are shown on the pdf presentation.
 
