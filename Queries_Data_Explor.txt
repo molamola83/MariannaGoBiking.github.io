@@ -1,0 +1,55 @@
+* Cyclistic Data Exploration */
+
+/*Skills used: Aggregate functions */
+
+SELECT *
+FROM `resolute-button-328209.Cyclisticmar2021.Mar2021` LIMIT 10
+
+SELECT COUNT(*)
+FROM `resolute-button-328209.Cyclisticmar2021.Mar2021`
+
+/* Focus on differences between members and casual users */
+
+SELECT COUNT(ride_id) as casual_tot_rides
+FROM `resolute-button-328209.Cyclisticmar2021.Mar2021`
+where member_casual = "casual"
+
+SELECT Max(ride_lenght) as casual_maximum_ride_lenght
+FROM `resolute-button-328209.Cyclisticmar2021.Mar2021`
+where member_casual ="casual"
+
+SELECT COUNT(ride_id) as member_tot_rides
+FROM `resolute-button-328209.Cyclisticmar2021.Mar2021`
+where member_casual = "member"
+
+SELECT Max(ride_lenght) as member_maximum_ride_lenght
+FROM `resolute-button-328209.Cyclisticmar2021.Mar2021`
+where member_casual ="member"
+
+SELECT member_casual, COUNT(ride_id) as tot_rides, max(ride_lenght) as maxridelenght
+FROM `resolute-button-328209.Cyclisticmar2021.Mar2021`
+group by member_casual
+
+SELECT SUM (ride_lenght) as tot_ride_lenght
+FROM `resolute-button-328209.Cyclisticmar2021.Mar2021`
+group by member_casual
+
+/* Focus on differences between members and casual including days of the week variable */
+
+SELECT Max(ride_lenght) as maximum_ride_lenght
+FROM `resolute-button-328209.Cyclisticmar2021.Mar2021`
+where member_casual ="member" and day_of_the_week <> 7
+
+SELECT COUNT(ride_id) as 
+FROM `resolute-button-328209.Cyclisticmar2021.Mar2021`
+where day_of_the_week= 7
+and member_casual = "member"
+
+SELECT Max(ride_lenght) as maximum_ride_lenght
+FROM `resolute-button-328209.Cyclisticmar2021.Mar2021`
+where member_casual ="casual" and day_of_the_week <> 7
+
+SELECT COUNT(ride_id) as 
+FROM `resolute-button-328209.Cyclisticmar2021.Mar2021`
+where day_of_the_week= 7
+and member_casual = "casual"
